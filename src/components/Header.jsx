@@ -1,13 +1,28 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 import Image from "next/image";
 import React from "react";
 import { FaAlignJustify, FaSearch } from "react-icons/fa";
 import Link from "next/link";
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth == 769) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
+
   return (
     <header className="w-full bg-green-700">
       <div className="container p-1 mx-auto text-white flex items-center justify-between gap-1 md:flex-row flex-col">
-        <div className="logo flex items-center md:justify-center justify-between gap-1 md:w-auto w-full">
+        <div className="logo flex items-center md:justify-center justify-between gap-1 md:w-auto w-full md:p-0 px-3">
           <Image
             src={"/logo.png"}
             width={60}
@@ -15,11 +30,18 @@ const Header = () => {
             alt="GHShop logo"
             className="border-2 border-white rounded-full filter drop-shadow-md "
           />
-          <button className="p-1 md:hidden block bg-white text-black text-3xl rounded-md cursor-pointer">
+          <button
+            onClick={() => setMenuOpened(!menuOpened)}
+            className="p-1 md:hidden block bg-white text-black text-3xl rounded-md cursor-pointer"
+          >
             <FaAlignJustify />
           </button>
         </div>
-        <div className="left flex items-center justiyf-center gap-1 md:flex-row flex-col-reverse md:w-auto w-full">
+        <div
+          className={`left flex items-center transition-all duration-500 justiyf-center gap-1 md:flex-row flex-col-reverse md:w-auto w-full overflow-hidden md:h-auto ${
+            menuOpened ? "h-[200px]" : "h-0"
+          }`}
+        >
           <div className="search md:w-[450px] h-[40px] w-full p-1 bg-white rounded-md flex items-center justify-between">
             <input
               type="text"
