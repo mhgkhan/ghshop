@@ -1,5 +1,7 @@
 import { Magra, Roboto_Flex } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const robotoFlex = Roboto_Flex({ subsets: ["latin"], weight: ["300", "400"] });
 
@@ -106,7 +108,11 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={robotoFlex.className}>
-        <>{children}</>
+        <>
+          <Header />
+          {children}
+          <Footer />
+        </>
       </body>
     </html>
   );
