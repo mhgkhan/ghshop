@@ -105,7 +105,9 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={robotoFlex.className}>{children}</body>
+      <body className={robotoFlex.className}>
+        <>{children}</>
+      </body>
     </html>
   );
 }
