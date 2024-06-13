@@ -39,7 +39,7 @@ const Header = () => {
         </div>
         <div
           className={`left flex items-center transition-all duration-500 justiyf-center gap-1 md:flex-row flex-col-reverse md:w-auto w-full overflow-hidden md:h-auto ${
-            menuOpened ? "h-[200px]" : "h-0"
+            menuOpened ? "h-[300px]" : "h-0"
           }`}
         >
           <div className="search md:w-[450px] h-[40px] w-full p-1 bg-white rounded-md flex items-center justify-between">
@@ -56,7 +56,13 @@ const Header = () => {
 
           <nav className="w-full">
             <ul className="flex items-center justify-center gap-3 md:flex-row flex-col md:w-auto w-full">
-              {Array.from(["home", "about", "conact"]).map((li, ind) => {
+              {Array.from([
+                "home",
+                "tranding",
+                "top Products",
+                "about",
+                "conact",
+              ]).map((li, ind) => {
                 return (
                   <li className="md:w-auto w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3">
                     <Link className="w-full" href={"/"}>
