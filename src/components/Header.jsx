@@ -87,9 +87,18 @@ const Header = () => {
                   </li>
                 );
               })}
+              <li className="md:w-auto w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3">
+                <Link
+                  className="w-full text-center flex items-center justify-center"
+                  href={"/"}
+                >
+                  <FaSearch />
+                </Link>
+              </li>
             </ul>
           </nav>
 
+          {/* 
           <div className="search md:w-[300px] h-[40px] w-full p-1 bg-white rounded-md flex items-center justify-between">
             <input
               type="text"
@@ -101,7 +110,11 @@ const Header = () => {
               <FaSearch />
             </button>
           </div>
+
+
+ */}
         </div>
+
         {isMobile ? (
           ""
         ) : (
