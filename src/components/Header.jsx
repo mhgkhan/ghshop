@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import React from "react";
 import { FaAlignJustify, FaCartArrowDown, FaSearch } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
 import Link from "next/link";
 
 const Header = () => {
@@ -62,7 +63,7 @@ const Header = () => {
             onClick={() => setMenuOpened(!menuOpened)}
             className="p-1 md:hidden block bg-white text-black text-3xl rounded-md cursor-pointer"
           >
-            <FaAlignJustify />
+            {menuOpened ? <GrClose /> : <FaAlignJustify />}
           </button>
         </div>
         <div
