@@ -17,7 +17,7 @@ export const metadata = {
   keywords:
     "Fashion, online shopping, trendy clothing, accessories, Next.js, GH SHOP, ecommerce, style, fashion-forward, deals",
   author: "mhgkhan",
-  url: "ghshop.vercel.app",
+  url: "mhgshop.netlify.app",
   image: "https://avatars.githubusercontent.com/u/128809509?v=4",
   type: "website",
   site_name: "gh shop",
