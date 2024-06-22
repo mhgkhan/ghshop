@@ -71,7 +71,7 @@ const Header = () => {
           }`}
         >
           <nav className="w-full">
-            <ul className="flex items-center justify-center gap-3 md:flex-row flex-col md:w-auto w-full">
+            <ul className="flex items-center justify-center md:gap-3 md:flex-row flex-col md:w-auto w-full">
               {Array.from([
                 "home",
                 "tranding",
@@ -80,14 +80,14 @@ const Header = () => {
                 "conact",
               ]).map((li, ind) => {
                 return (
-                  <li className="md:w-auto w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3">
+                  <li className="md:w-auto px-1 py-3 w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3   hover:bg-white hover:text-black">
                     <Link className="w-full" href={"/"}>
                       {li.toUpperCase()}
                     </Link>
                   </li>
                 );
               })}
-              <li className="md:w-auto w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3">
+              <li className="md:w-auto w-full px-1 py-3 text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3   hover:bg-white hover:text-black">
                 <Link
                   className="w-full text-center flex items-center justify-center"
                   href={"/"}
