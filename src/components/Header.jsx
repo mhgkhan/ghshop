@@ -23,13 +23,32 @@ const Header = () => {
     <header className="w-full bg-green-700">
       <div className="container p-1 mx-auto text-white flex items-center justify-between gap-1 md:flex-row flex-col">
         <div className="logo flex items-center md:justify-center justify-between gap-1 md:w-auto w-full md:p-0 px-3">
-          <Image
-            src={"/logo.png"}
-            width={60}
-            height={70}
-            alt="GHShop logo"
-            className="border-2 border-white rounded-full filter drop-shadow-md "
-          />
+          <div className="flex items-center gap-1">
+            <Image
+              src={"/logo.png"}
+              width={60}
+              height={70}
+              alt="GHShop logo"
+              className="border-2 border-white rounded-full filter drop-shadow-md "
+            />
+            <div className="flex items-cneter">
+              <h2
+                className="text-2xl font-bold text-white border-2 p-1 border-yellow-400 rounded-lg"
+                style={{ borderRadius: "10px 3px 3px 10px" }}
+              >
+                GH
+              </h2>
+              <h2
+                className="text-2xl font-bold text-white border-2 p-1 border-white rounded-lg"
+                style={{
+                  borderRadius: "0px 10px 10px 0px",
+                  borderLeft: "none",
+                }}
+              >
+                SHOP
+              </h2>
+            </div>
+          </div>
 
           {isMobile ? (
             <button className="p-1 md:hidden block bg-white text-black text-3xl rounded-md cursor-pointer">
