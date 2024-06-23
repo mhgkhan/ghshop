@@ -25,13 +25,13 @@ const Header = () => {
       <div className="container p-1 mx-auto text-white flex items-center justify-between gap-1 md:flex-row flex-col">
         <div className="logo flex items-center md:justify-center justify-between gap-1 md:w-auto w-full md:p-0 px-3">
           <div className="flex items-center gap-1">
-            <Image
+            {/* <Image
               src={"/logo.png"}
               width={60}
               height={70}
               alt="GHShop logo"
               className="border-2 border-white rounded-full filter drop-shadow-md "
-            />
+            /> */}
             <div className="flex items-cneter">
               <h2
                 className="text-2xl font-bold text-white border-2 p-1 border-yellow-400 rounded-lg"
@@ -72,23 +72,29 @@ const Header = () => {
           }`}
         >
           <nav className="w-full">
-            <ul className="flex items-center justify-center md:gap-3 md:flex-row flex-col md:w-auto w-full">
+            <ul className="flex items-center justify-center md:gap-1 md:flex-row flex-col md:w-auto w-full">
               {Array.from([
                 "home",
-                "tranding",
-                "top Products",
+                "shop",
+                "categories",
                 "about",
-                "conact",
+                "contact",
               ]).map((li, ind) => {
                 return (
-                  <li className="md:w-auto px-1 py-3 w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3   hover:bg-white hover:text-black">
-                    <Link className="w-full" href={"/"}>
+                  <li
+                    key={ind}
+                    className="transition-all duration-500 md:w-auto px-2 py-3 w-full text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3   hover:bg-white hover:text-black"
+                  >
+                    <Link
+                      className="w-full"
+                      href={`${li == "home" ? "/" : "/" + li}`}
+                    >
                       {li.toUpperCase()}
                     </Link>
                   </li>
                 );
               })}
-              <li className="md:w-auto w-full px-1 py-3 text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3   hover:bg-white hover:text-black">
+              <li className="transition-all duration-500 md:w-auto w-full px-2 py-3 text-center md:border-none  border-b-[1px] border-gray-400 md:m-0 mt-3   hover:bg-white hover:text-black">
                 <Link
                   className="w-full text-center flex items-center justify-center"
                   href={"/"}
