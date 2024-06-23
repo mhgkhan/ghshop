@@ -11,19 +11,21 @@ export default function Home() {
         backgroundBlendMode: "darken",
       }}
     >
-      <h1
-        className="text-xl text-black text-center p-5"
-        style={{ lineHeight: "2" }}
-      >
-        Hi, <br /> This Website is Under Construction <br /> <br /> Have any
-        issue In Structure, Theme etc ? Please Contact with us <br />
-        <a
-          href="mailto:muhammadhasnainghazna@gmail.com"
-          className="text-white bg-blue-500 rounded-md p-2 m-1"
+      <div className="w-[50%] mx-auto bg-white">
+        <h1
+          className="text-xl text-black text-center p-5"
+          style={{ lineHeight: "2" }}
         >
-          Message me
-        </a>
-      </h1>
+          Hi, <br /> This Website is Under Construction <br /> <br /> Have any
+          issue In Structure, Theme etc ? Please Contact with us <br />
+          <a
+            href="mailto:muhammadhasnainghazna@gmail.com"
+            className="text-white bg-blue-500 rounded-md p-2 m-1"
+          >
+            Message me
+          </a>
+        </h1>
+      </div>
 
       {/* <Image
         src={
